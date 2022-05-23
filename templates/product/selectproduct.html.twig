@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Select your products{% endblock %}
+
+
+{% block body %}
+
+    {% for product in products %}
+        <div class="d-flex justify-content-center">
+            {% for product in products %}
+                <div class="card">
+                    <img src="{{ product.img }}" alt="Denim Jeans" style="width:100%">
+                    <h1>{{ product.prodname }}</h1>
+                    <p class="price">{{ product.price }}</p>
+                    <p>{{ product.description }}</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            {% endfor %}
+        </div>
+
+
+{% endblock %}

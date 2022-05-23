@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="d-flex">
+            {% for product in products %}
+                <div id="prodcard{{ product.id }}" class="card">
+                    <img class="prodimg" src="{{ product.img }}" alt="Denim Jeans">
+                    <h1>{{ product.prodname }}</h1>
+                    <p class="price">€{{ product.price }}</p>
+                    <p>{{ product.description }}</p>
+                    <div>{% for specification in product.specifications %}
+                            <p>{{ specification }}</p>
+                        {% endfor %}</div>
+                    <div class="d-flex justify-content-around">
+                        <button value="minus" id="{{ product.id }}" class=" drgn btn">-</button>
+                        <button value="plus" id="{{ product.id }}" class=" drgn btn ">+</button>
+                    </div>
+                    <span>Amount:</span>
+                    <span id="amount{{ product.id }}">{{ product.amount }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div>
+        <a href="{{ '/payment' }}">
+            <button class="btn btn-primary">buy me</button>
+        </a>
+    </div>
+    <br>
+
+    <div>
+        <form action="">
+            <input id="inputcode" type="text">
+        </form>
+        <br>
+        <button id="entercode" class="btn btn-primary">Enter code</button>
+    </div>
+
+
+    <br>
+    <div>
+        <span>Total to pay: </span>
+        <span id="total">{{ total }}€</span>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,354 @@
+html * {
+    /*font-family: 'Montserrat', sans-serif;*/
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    min-height: 500px;
+    max-height: 800px;
+}
+
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: 1px solid #6A53A1;;
+    border-radius: 5px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #6A53A1;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    background-color: white;
+    color: #6A53A1;
+    transition: ease-in 0.2s;
+
+}
+
+.prodimg {
+    width: 300px;
+    min-height: 200px;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.prodflex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+
+}
+
+.navflex {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.navflex a, u {
+    color: white;
+    font-size: 20px;
+}
+
+a, u {
+    text-decoration: none !important;
+}
+
+.navcolor {
+    background-color: #6A53A1;
+}
+
+.navimg {
+    width: 60px;
+    height: 30px;
+}
+
+
+@media (min-width: 1024px) {
+    .fix-me-line a {
+        text-decoration: none;
+        position: relative;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .fix-me-line a:hover {
+        color: white;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .fix-me-line a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .fix-me-line a:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+}
+
+.parallax {
+    background-image: url("./img/woman.jpg");
+
+    min-height: 650px;
+    margin-top: -36px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centerme h1 {
+    text-align: center;
+    color: #6A53A1;
+}
+
+.centerme p {
+    text-align: center;
+    color: white;
+}
+
+.textamp {
+    font-weight: bolder;
+    color: #6A53A1;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mycard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 2%;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+}
+
+.mybutton {
+    padding: 10px;
+    margin: 10px;
+    background-color: #6A53A1;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid #6A53A1;
+    font-size: larger;
+    color: white;
+}
+
+.mybutton:hover {
+    background-color: transparent;
+    border: 2px solid red;
+    transition: ease-in 0.2s;
+    transition: ease-out 0.2s;
+    color: red;
+
+}
+
+.jmr:hover {
+    background-color: #6A53A1;
+    color: white;
+    transition: ease-in 0.3s;
+    transition: ease-out 0.3s;
+
+}
+
+.jmr:hover .test h2 {
+    color: white !important;
+    transition: ease-in 0.3s;
+
+}
+
+.jmr:hover .test p {
+    color: white !important;
+    transition: ease-in 0.3s;
+
+}
+
+.jmr:hover button {
+    background-color: white;
+    color: #6A53A1;
+    border: 1px solid white;
+}
+
+.formcard {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1% !important;
+    border-radius: 5px;
+
+}
+
+.logo{
+    width: 30% !important;
+}
+
+.navcart{
+    width: 13% !important;
+}
+.texthead {
+    color: #6A53A1;
+    font-weight: bolder;
+}
+
+.dk{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #F1F2F2;
+    border-bottom: 1px solid #C4C4C4;
+    border-top: 1px solid #C4C4C4;
+}
+.textcolor {
+    color: #6A53A1;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.register-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.background{
+    background-color: #F1F2F2;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #C4C4C4;
+    border-top: 1px solid #C4C4C4;
+}
+
+.homecard{
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+.footerflex{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6A53A1;
+    color: white;
+    padding-top: 20px;
+}
+
+.historycard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 2%;
+    border-radius: 20px;
+    /*min-height: 400px;*/
+}
+
+.historyimg{
+    width: 50%;
+}
+
+.historyflex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media all and  (min-width: 320px ) and (max-width: 425px ){
+    .dk img{
+        width: 10% !important;
+        height: 70% !important;
+    }
+}
+
+.admin-card-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.admin-card{
+    text-align: center;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.admin-img{
+    width: 200px;
+
+}
+
+
+.admin-hover:hover {
+    background-color: #2561D4;
+    color: white;
+    transition: ease-in 0.3s;
+    transition: ease-out 0.3s;
+    position: relative;
+    top: -10px;
+
+}
+
+.admin-hover:hover .test h2 {
+    color: white !important;
+    transition: ease-in 0.3s;
+
+}
+
+.admin-hover:hover .test p {
+    color: white !important;
+    transition: ease-in 0.3s;
+}

@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+            text-align: center;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Hallo Admin ✅</h1>
+    </div>
+    <script src="../public/konami.js"></script>
+    <link rel="stylesheet" href="./public/stylesheet.css">
+    {#    <div>#}
+    {#        <ul class="list-group ">#}
+    {#            <li>#}
+    {#                <button class="btn btn-primary" ><a class="text-white" href="{{ path('product_index') }}">Add products</a></button>#}
+    {#                <button class="btn btn-primary" ><a class="text-white" href="{{ path('categorie_index') }}">Add categories</a></button>#}
+    {#                <button class="btn btn-primary" ><a class="text-white" href="{{ path('product_has_specification_index') }}">Add specifications to product</a></button>#}
+    {#                <button class="btn btn-primary" ><a class="text-white" href="{{ path('specification_index') }}">Add specifications</a></button>#}
+    {#                <button class="btn btn-primary" ><a class="text-white" href="{{ path('discount_index') }}">Add Discount code</a></button>#}
+    {#            </li>#}
+    {#        </ul>#}
+    {#    </div>#}
+
+
+    <div class="admin-card-wrapper">
+        <a href="{{ path('product_index') }}">
+            <div class="admin-card admin-hover">
+                <p>Add products</p>
+                <img class="admin-img" src="./img/box.png" alt="">
+            </div>
+        </a>
+
+        <a href="{{ path('categorie_index') }}">
+            <div class="admin-card admin-hover">
+                <p>Add Categories</p>
+                <img class="admin-img" src="./img/note.png" alt="">
+            </div>
+        </a>
+
+        <a href="{{ path('product_has_specification_index') }}">
+            <div class="admin-card admin-hover">
+                <p>Add specifications</p>
+                <img class="admin-img" src="./img/box.png" alt="">
+            </div>
+        </a>
+
+        <a href="{{ path('specification_index') }}">
+            <div class="admin-card admin-hover">
+                <p>Make specifications</p>
+                <img class="admin-img" src="./img/box.png" alt="">
+            </div>
+        </a>
+
+    </div>
+    {#page still in development#}
+    {#        <a href="{{ path('discount_index') }}">#}
+    {#            <div class="admin-card admin-hover">#}
+    {#                <p>Add Discount code</p>#}
+    {#                <img class="admin-img" src="./img/discount.png" alt="">#}
+    {#            </div>#}
+    {#        </a>#}
+    {#    </div>#}
+{% endblock %}

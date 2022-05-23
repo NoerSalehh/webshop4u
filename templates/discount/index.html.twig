@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Discount index{% endblock %}
+
+{% block body %}
+    <h1>Discount index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Percentage</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for discount in discounts %}
+            <tr>
+                <td>{{ discount.id }}</td>
+                <td>{{ discount.code }}</td>
+                <td>{{ discount.percentage }}</td>
+                <td>
+                    <a href="{{ path('discount_show', {'id': discount.id}) }}">show</a>
+                    <a href="{{ path('discount_edit', {'id': discount.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('discount_new') }}">Create new</a>
+{% endblock %}

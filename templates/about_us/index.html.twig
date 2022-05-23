@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutUsController!{% endblock %}
+
+{% block body %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/public/stylesheet.css">
+        <title>Document</title>
+    </head>
+    <body>
+    <div class="aboutflex">
+        <div>
+            <h1>About Webshop4U</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."</p>
+        </div>
+
+        <div>
+            <img src="../{{ asset('img/logo4u.png') }}" alt="logo">
+        </div>
+    </div>
+    <div>
+        <div class="abcard">
+            <img src="../{{ asset('img/person.jfif') }}" alt="mouse">
+            <h2>Noer Al Haj Saleh</h2>
+            <p>Noer is de main devopler of webshop4U, Noer is a exam year student of a soft developer education and is in a internship at DN Technology where he started this project.
+            </p>
+        </div>
+    </div>
+    </body>
+    </html>
+
+    <style>
+        .aboutflex {
+            display: flex;
+            justify-content: space-around;
+            padding: 1%;
+        }
+        .abcard{
+            width: 20%;
+            /*background-color: red;*/
+            text-align: center;
+        }
+        .abcard img{
+            width: 50%;
+        }
+    </style>
+{% endblock %}

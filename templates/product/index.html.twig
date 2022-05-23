@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block body %}
+    <h1>Product index</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Prodname</th>
+            <th>Description</th>
+            <th>Img</th>
+            <th>actions</th>
+            <th>img</th>
+            <th>Categorie</th>
+            <th>Spec type</th>
+            <th>price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.prodname }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.img }}</td>
+                <td>
+                    <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
+                    <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+                </td>
+                {% if product.img is same as null %}
+                    <td>
+                        <img class="imgIntd" src="" alt="{{ product.prodname }}">
+                        
+                    </td>
+                {% else %}
+                    <td><img class="imgIntd" src="{{ product.img }}" alt="{{ product.prodname }}"></td>
+                {% endif %}
+                <td>{{ product.categorie }}</td>
+                <td>{% for specification in product.specifications %}
+
+                        {{ specification }}
+                    {% endfor %}
+                </td>
+                <td>{{ product.price }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {#    <div class="d-flex justify-content-center"> #}
+    {#        {% for product in products %} #}
+    {#            <div class="card"> #}
+    {#                <img class="prodimg" src="{{ product.img }}" alt="Denim Jeans"> #}
+    {#                <h1>{{ product.prodname }}</h1> #}
+    {#                <p class="price">€{{ product.price }}</p> #}
+    {#                <p>{{ product.description }}</p> #}
+    {#                <p><button>Add to Cart</button></p> #}
+    {#            </div> #}
+    {#        {% endfor %} #}
+    {#    </div> #}
+
+
+    <a href="{{ path('product_new') }}">Create new</a>
+
+    <style>
+
+        .imgIntd {
+            width: 50%;
+        }
+
+    </style>
+{% endblock %}

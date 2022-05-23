@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProductHasSpecification{% endblock %}
+
+{% block body %}
+    <h1>ProductHasSpecification</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product_has_specification.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('product_has_specification_index') }}">back to list</a>
+
+    <a href="{{ path('product_has_specification_edit', {'id': product_has_specification.id}) }}">edit</a>
+
+    {{ include('product_has_specification/_delete_form.html.twig') }}
+{% endblock %}

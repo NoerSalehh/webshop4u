@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+{# {% block title %}Hello DefaultController!{% endblock %} #}
+
+{% block body %}
+    {# <style> #}
+    {# .example-wrapper { #}
+    {# margin: 1em auto; #}
+    {# max-width: 800px; #}
+    {# width: 95%; #}
+    {# font: 18px/1.5 sans-serif; #}
+    {# } #}
+
+    {# .example-wrapper code { #}
+    {# background: #F5F5F5; #}
+    {# padding: 2px 6px; #}
+    {# } #}
+    {# </style> #}
+
+    {# <div class="example-wrapper"> #}
+    {# <h1>Hello {{ controller_name }}! ✅</h1> #}
+
+    {# This friendly message is coming from: #}
+    {# <ul> #}
+    {# <li>Your controller at <code><a href="{{ 'C:/school/htdocs/kaasplank/kaasplank/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li> #}
+    {# <li>Your template at <code><a href="{{ 'C:/school/htdocs/kaasplank/kaasplank/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li> #}
+    {# </ul> #}
+    {# </div> #}
+
+
+    <div class="parallax">
+        <div class="centerme">
+            <div class="textamp">
+                <br>
+                <h1>Welcome to Webshop4U !</h1> <br>
+                <p>Shopping on the web in perfection </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dk">
+        <img class="logo-home" src="./img/logo4u.png" alt="">
+        <div>
+            <h2 class="texthead"> Mobility Shopping begins here</h2>
+            <h4>The thing we love the most</h4> <br>
+            <p>People ask us frequently why we sell all kinds of product. That is because we believe in a webshop that can supply
+                happiness to all customers! From gaming accessories to clothing bags, we support all kind of customers.<br>
+                 That means that our laptops are of good quality and our clothing have the best fashion.
+                 Explore our Webshop4U for more details and information.
+                <br> great offers that no one else has!
+
+            </p>
+        </div>
+    </div>
+
+    <div class="flex homecard">
+        <div class="mycard jmr">
+            <h2 class="test">About us</h2>
+            <p class="test"> Our goal is to supply affordable and good performing laptops to everyone.
+                Click the button below to know more.
+            </p>
+            <a href="{{ '/about-us' }}">
+                <button class=mybutton> Details</button>
+            </a>
+        </div>
+
+        <div class="mycard jmr">
+            <h2 class="test">What we sell</h2>
+            <p class="test"> Looking for your perfect laptop? Or are you just looking around?
+                Click the button below for all of our products </p>
+            <a href="{{ '/cart' }}">
+                <button class=mybutton> Details</button>
+            </a>
+        </div>
+
+        <div class="mycard jmr">
+            <h2 class="test">Login first?</h2>
+            <p class="test"> Already decided what you want? Login first so you can enjoy the
+                functions it will bring to you.
+            </p>
+
+            <a href="{{ '/login' }}">
+                <button class=mybutton> Details</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="background">
+        <section class="fix-me-space">
+            <h2 class="textcolor">Our recommendations</h2>
+            <blockquote class="blockquote">
+            </blockquote>
+
+            <div class="prodflex">
+                {# {% for product in products %} #}
+                <div class="card">
+                    <img class="prodimg" src="./img/tas.jpg" alt="Denim Jeans" style="width:100%">
+                    <h3></h3>
+                    <p class="price">€649.99</p>
+                    <p>TGG Marmont small matelassé </p>
+                    <p>Specifications</p>
+                    <p>The small GG Marmont chain shoulder bag has a softly structured shape  </p>
+                    <p><a href="{{ '/cart' }}"> <br>
+                            <button>See products</button>
+                        </a></p>
+                </div>
+
+                <div class="card">
+                    <img class="prodimg" src="./img/goose2.jpg" alt="Denim Jeans" style="width:100%">
+                    <h3></h3>
+                    <p class="price">€275</p>
+                    <p>Canada Goose Freestyle Crew</p>
+                    <p>Specifications</p>
+                    <p>Canada Goose, navy blue 100% leather</p> <br>
+                    <p><a href="{{ '/cart' }}">
+                            <button>See products</button>
+                        </a></p>
+                </div>
+
+                <div class="card">
+                    <img class="prodimg" src="./img/msi.png" alt="Denim Jeans" style="width:100%">
+                    <h3></h3>
+                    <p class="price">€900</p>
+                    <p>Logitech G502 Lightspeed gaming mouse. This mouse has switchable weights and is wireless</p>
+                    <p>Specifications</p>
+                    <p>GPU, RTX 3090 processor, i7 Samsung, 1TB evo 970 M.2 SSD</p>
+                    <p><a href="{{ '/cart' }}">
+                            <button>See products</button>
+                        </a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="stylesheet.css">
+{#    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">#}
+
+{% endblock %}
+
+{% block body %}
+    {% for product in products %}
+        {% for specification in product.specifications %}
+        {% endfor %}
+    {% else %}
+    {% endfor %}
+
+    <div class="prodflex">
+        {% for product in products %}
+            <div class="card">
+                <img class="prodimg" src="{{ product.img }}" alt="No image" style="width:100%">
+                <h3>{{ product.prodname }}</h3>
+                <br>
+                <p class="price">€{{ product.price }}</p>
+                <br>
+                <p>{{ product.description }}</p>
+                <br>
+                <p>{% for specification in product.specifications %}
+                        {{ specification }}
+                        <br>
+                    {% endfor %}</p> <br>
+                <p><a href="{{ path('drum', {'id':product.id}) }}">
+                        <button>Add to Cart</button>
+                    </a></p>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

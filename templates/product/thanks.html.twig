@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thank you for ordering{% endblock %}
+
+
+
+{% block body %}
+<h1>Thank you for ordering</h1>
+
+{% for order in order %}
+<td>{% for specification in product.specifications %}
+    {% endfor %}
+    {% else %}
+    {% endfor %}
+
+    <div>
+        <div>
+            <p>To pay your order, press the button </p>
+        </div>
+        <div>
+            <span>{{ form_start (submit) }}</span>
+
+            <span >{{ form_end (submit) }}</span>
+        </div>
+    </div>
+
+
+
+    {% endblock %}
+    {#    // += neemt de bestaande waarde en voegt er iets aan toe          #}

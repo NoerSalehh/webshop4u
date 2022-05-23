@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProductHasSpecification index{% endblock %}
+
+{% block body %}
+    <h1>ProductHasSpecification index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product_has_specification in product_has_specifications %}
+            <tr>
+                <td>{{ product_has_specification.id }}</td>
+                <td>
+                    <a href="{{ path('product_has_specification_show', {'id': product_has_specification.id}) }}">show</a>
+                    <a href="{{ path('product_has_specification_edit', {'id': product_has_specification.id}) }}">edit</a>
+                </td>
+            </tr>
+
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('product_has_specification_new') }}">Create new</a>
+{% endblock %}

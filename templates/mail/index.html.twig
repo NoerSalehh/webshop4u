@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MailController!{% endblock %}
+
+{% block body %}
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Order id</th>
+                <th>Placed at</th>
+                <th>Product</th>
+                <th>Username</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Phone</th>
+                <th>Adress</th>
+                <th>City</th>
+                <th>Postalcode</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>{{ order.id}} </tr>
+            <tr>{{ order.placedAt }}</tr>
+            <tr>{{ order.orderHasProducts.prodname }}</tr>
+            <tr>{{ user.username }}</tr>
+            <tr>{{ user.name }}</tr>
+            <tr>{{ user.lastname }}</tr>
+            <tr>{{ user.phone }}</tr>
+            <tr>{{ user.adress }}</tr>
+            <tr>{{ user.city }}</tr>
+            <tr>{{ user.postalcode }}</tr>
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}
